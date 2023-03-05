@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Store} from "@ngrx/store";
 import {TodoApiActions, TodoPageActions} from "./actions";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {TodoService} from "../../../shared/services/todo.service";
 import {Todo} from "../../../shared/models/todo";
@@ -15,9 +15,9 @@ import {TodoProps} from "../../../shared/interfaces/todoProps";
 })
 export class TodoComponent implements OnInit {
 
-  todoForm: FormGroup;
+  todoForm: UntypedFormGroup;
 
-  constructor(private fb: FormBuilder,
+  constructor(private fb: UntypedFormBuilder,
               private store: Store,
               private todoService: TodoService)
   {
