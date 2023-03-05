@@ -1,4 +1,4 @@
 {
-  "ola": "transloco pt",
+  "hello": "transloco pt",
   "dynamic": "transloco {{value}}"
 }

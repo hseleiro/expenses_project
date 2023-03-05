@@ -1,0 +1,25 @@
+<ng-template *ngIf="vm$ | async as vm">
+  Showing {{vm.itemFrom}}
+  to {{vm.itemTo}} of
+  {{vm.total}} entries
+  <button
+    (click)="goToStart()"
+    [disabled]="vm.previousDisabled">
+    Begin
+  </button>
+  <button
+    (click)="previous(vm)"
+    [disabled]="vm.previousDisabled">
+    Previous
+  </button>
+  <button
+    (click)="next(vm)"
+    [disabled]="vm.nextDisabled">
+    Next
+  </button>
+  <button
+    (click)="goToEnd(vm)"
+    [disabled]="vm.nextDisabled">
+    End
+  </button>
+</ng-template>

@@ -1,5 +1,5 @@
 import {createAction, props} from "@ngrx/store";
-import {Todo} from "../../../../shared/models/todo";
+import {Todo} from "../../../shared/models/todo";
 
 export const todosLoaded = createAction(
   '[Todos APi] Todos Loaded Success',

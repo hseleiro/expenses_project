@@ -1,6 +1,6 @@
 import {Todo} from "../models/todo";
 import {Action, createReducer, on} from "@ngrx/store";
-import {TodoPageActions} from "../../app/private/todo/actions";
+import {TodoPageActions} from "../../private/todo/actions";
 
 export interface State {
   collection: Todo[];

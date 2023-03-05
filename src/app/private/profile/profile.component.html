@@ -1,0 +1,22 @@
+<section class="top-bar">
+  <app-top-bar>
+    <ng-template #title>
+      <h1>Profile</h1>
+    </ng-template>
+    <ng-template #firstIcon>
+      <button
+        mat-icon-button
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"
+        [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="navigateTo('welcome')">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+      </mat-menu>
+    </ng-template>
+  </app-top-bar>
+</section>
