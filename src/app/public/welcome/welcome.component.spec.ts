@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { WelcomeComponent } from './welcome.component';
 import {Store} from "@ngrx/store";
 import {MockStore, provideMockStore} from "@ngrx/store/testing";
-import {State} from "../../../shared/state/welcome.reducer";
+import {State} from "../../shared/state/welcome.reducer";
 
 describe('WelcomeComponent', () => {
   let component: WelcomeComponent;

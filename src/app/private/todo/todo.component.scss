@@ -1,0 +1,9 @@
+@import "./src/assets/scss/variables";
+
+.container {
+  .section {
+    .item span {
+      color: $black;
+    }
+  }
+}

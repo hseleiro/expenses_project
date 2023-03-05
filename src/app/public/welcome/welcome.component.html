@@ -1,1 +1,141 @@
-<p>Welcome to FireStarter</p>
+<section class="top-bar">
+  <app-top-bar>
+    <ng-template #title>
+      <h1>Welcome</h1>
+    </ng-template>
+    <ng-template #firstIcon>
+      <button
+        mat-icon-button
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"
+        [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="navigateTo('profile')">
+          <mat-icon>account_circle</mat-icon>
+          <span>Profile</span>
+        </button>
+      </mat-menu>
+    </ng-template>
+  </app-top-bar>
+</section>
+<div class="main-container">
+  <div class="content">
+    <span class="title">Welcome</span>
+  </div>
+</div>
+<!--<p>{{ 'hello' | transloco }}</p>
+
+<h2>Change Lang</h2>
+<div (click)="changeLang('en')">EN</div>
+<div (click)="changeLang('pt')">PT</div> -->
+
+<!-- Top bar
+<section class="top-bar">
+  <app-top-bar>
+    <ng-template #title>
+      <h1>Welcome</h1>
+    </ng-template>
+    <ng-template #firstIcon>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>login</mat-icon>
+      </button>
+    </ng-template>
+  </app-top-bar>
+</section> -->
+
+<!--<div class="main-container">
+  <app-card>
+    <ng-template #title >
+      <h1>Login</h1>
+    </ng-template>
+    <ng-template #content>
+      <form [formGroup]="form">
+        <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+          <mat-label>Enter some input</mat-label>
+          <input matInput #input maxlength="10" placeholder="Ex. Nougat">
+          <mat-hint align="end">{{input.value.length}}/10</mat-hint>
+        </mat-form-field>
+      </form>
+    </ng-template>
+  </app-card>
+</div> -->
+
+
+<!--<app-button
+  [color]="'primary'"
+  [disabled]="false"
+  [style]="'mat-stroked-button'"
+  (click)="getName()">
+
+  <ng-template #textLeft>
+    <span>Text left</span>
+  </ng-template>
+
+  <ng-template #icon>
+    <app-icon [color]="'primary'">
+      <ng-template #iconName>Login</ng-template>
+    </app-icon>
+  </ng-template>
+
+  <ng-template #textRight>
+    <span>Text right</span>
+  </ng-template>
+
+</app-button> -->
+
+<!--<app-pager [itemsPerPage]="10" [total]="10" [pageIndex]="10"></app-pager>-->
+
+<!--<app-card>
+  <ng-template #title>
+    <h1>Get daily concert</h1>
+  </ng-template>
+  <ng-template #content></ng-template>
+  <ng-template #submitButton>
+    <button (click)="test()">Submit</button>
+  </ng-template>
+</app-card>-->
+
+<!--<div class="main-container">
+  <app-card>
+    <ng-template class="header" #header>
+      <span class="title">Please add your expense above</span>
+    </ng-template>
+    <ng-template #content>
+      <div class="content">
+        <form class="add-expense-form" [formGroup]="addExpenseForm">
+          <mat-form-field>
+            <mat-label>Euros</mat-label>
+            <input [ngModel]="0 | currency:'EUR':true"
+                   appNumericOnly
+                   matInput
+                   formControlName="expense">
+          </mat-form-field>
+        </form>
+      </div>
+    </ng-template>
+    <ng-template #actions>
+      <div class="actions">
+        <button (click)="test()" mat-flat-button color="primary">Submit</button>
+      </div>
+    </ng-template>
+  </app-card>
+</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

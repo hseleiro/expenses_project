@@ -2,16 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import {Store} from "@ngrx/store";
 import {TodoApiActions, TodoPageActions} from "./actions";
 import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
-import {ActivatedRoute, Router} from "@angular/router";
-import {TodoService} from "../../../shared/services/todo.service";
-import {Todo} from "../../../shared/models/todo";
-import {TodoProps} from "../../../shared/interfaces/todoProps";
-
+import {TodoService} from "../../shared/services/todo.service";
+import {Todo} from "../../shared/models/todo";
 
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css']
+  styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
 
@@ -38,13 +35,6 @@ export class TodoComponent implements OnInit {
       this.store.dispatch(TodoApiActions.todosLoaded({ todos: todos}))
     })
   }
-  // onSelect(todo: Todo) {
-  //   this.store.dispatch(TodoPageActions.selectTodo({todoId: todo.id}));
-  // }
-
-  // removeSelectedTodo() {
-  //   this.store.dispatch(TodoPageActions.clearSelectedTodo())
-  // }
 
   createTodo() {
     this.store.dispatch(TodoPageActions.createTodo({ todo: this.todoForm.value}))

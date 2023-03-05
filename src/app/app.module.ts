@@ -4,28 +4,27 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AppRoutingModule} from "./app-routing.module";
 import {RouterModule} from "@angular/router";
-import {StoreModule} from "@ngrx/store";
-import {metaReducers, reducers} from "../shared/state";
-import {StoreDevtoolsModule} from "@ngrx/store-devtools";
-import { LazyLoadingComponent } from './lazy-loading/lazy-loading.component';
-import {LazyLoadingModule} from "./lazy-loading/lazy-loading.module";
 import {HttpClientModule} from "@angular/common/http";
 import { TranslocoRootModule } from './transloco-root.module';
-
+import {SharedModule} from "./shared/shared.module";
+import {StoreModule} from "@ngrx/store";
+import {metaReducers, reducers} from "./shared/state";
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    LazyLoadingComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    RouterModule,
-    LazyLoadingModule,
     HttpClientModule,
+    RouterModule,
+    ReactiveFormsModule,
     TranslocoRootModule,
+    SharedModule,
     StoreModule.forRoot(reducers, {metaReducers}),
     StoreDevtoolsModule.instrument(),
   ],

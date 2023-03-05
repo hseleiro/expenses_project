@@ -1,5 +1,5 @@
 import {createAction, props} from "@ngrx/store";
-import {TodoProps} from "../../../../shared/interfaces/todoProps";
+import {TodoProps} from "../../../shared/interfaces/todoProps";
 
 export const enter = createAction('[Todo Page] Enter')
 

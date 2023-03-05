@@ -1,25 +1,25 @@
 import {Action, createReducer, on} from "@ngrx/store";
-import { WelcomePageActions } from "../../app/public/welcome/actions"
+import {ProfilePageActions} from "../../private/profile/actions";
 
 export interface State {
-  message: String;
+  loading: boolean;
 }
 
 export const initialState: State = {
-  message: 'Welcome'
+  loading: false
 }
 
-export const welcomeReducer = createReducer(
+export const profileReducer = createReducer(
   initialState,
   on(
-    WelcomePageActions.enter,
+    ProfilePageActions.enter,
     (state) => {
       return {
         ...state,
       }
-    })
+    }),
 )
 
 export function reducer(state: undefined | State, action: Action) {
-  return welcomeReducer(state, action)
+  return profileReducer(state, action)
 }
