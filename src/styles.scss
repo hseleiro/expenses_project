@@ -43,6 +43,14 @@ time, mark, audio, video {
 
 // Shared
 
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
 .title {
   font-weight: bold;
   font-size: 1.5em;

@@ -21,9 +21,7 @@
   </app-top-bar>
 </section>
 <div class="main-container">
-  <div class="content">
-    <span class="title">Welcome</span>
-  </div>
+  <span class="title">Welcome</span>
 </div>
 <!--<p>{{ 'hello' | transloco }}</p>
 
@@ -125,7 +123,7 @@
 
 
 
-
+<div *ngFor="let expense of (expenses | async)">{{expense.id}}</div>
 
 
 

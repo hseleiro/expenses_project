@@ -14,7 +14,7 @@ export class SharedService {
   ) {}
 
   // Router state
-  get getRouterState() {
+  get getRouterState(): RouterReducerState<RouterStateUrl> | undefined {
     this.store.pipe(select(getRouterState)).subscribe((routerStore) => {
       this.routerState = routerStore
     });
