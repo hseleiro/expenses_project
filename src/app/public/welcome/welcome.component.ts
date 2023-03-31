@@ -1,16 +1,16 @@
 import {Component, OnInit} from '@angular/core';
-import {select, Store} from '@ngrx/store';
+import {Store} from '@ngrx/store';
 import { WelcomePageActions } from "../welcome/actions"
 import {TranslocoService} from "@ngneat/transloco";
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {saveExpense} from "./actions/welcome-page.actions";
 import {Router} from "@angular/router";
-import {firstValueFrom, Observable, Subscription} from "rxjs";
+import {Observable, Subscription} from "rxjs";
 import {RouterStateUrl} from "../../shared/router-state/custom-serializer";
 import {RouterReducerState} from "@ngrx/router-store";
 import {SharedService} from "../../shared/services/shared.service";
-import {HttpClient} from "@angular/common/http";
 import {ExpensesService} from "../../shared/services/expenses.service";
+import {Expense} from "../../shared/models/expense";
 
 type ViewModel = {
   numberOfConcerts: [{artistName: string, total: number}, {artistName: string, total: number}]
@@ -37,7 +37,7 @@ export class WelcomeComponent implements OnInit {
   addExpenseForm: FormGroup | undefined;
   private getRouterSubscription: Subscription | undefined;
   private routerStore: RouterReducerState<RouterStateUrl> | undefined;
-  expenses: Observable<any> | undefined;
+  expenses: Observable<Expense[]> | undefined;
 
   constructor(private store: Store,
               private translocoService: TranslocoService,

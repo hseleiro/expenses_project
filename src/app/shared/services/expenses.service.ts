@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Expense} from "../models/expense";
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,8 @@ export class ExpensesService {
 
   constructor(private http: HttpClient) {}
 
-  get getExpenses(): Observable<any> {
-    return this.http.get(this.expensesUrl)
+  get getExpenses(): Observable<Expense[]> {
+    return this.http.get<Expense[]>(this.expensesUrl)
   }
 
 }
