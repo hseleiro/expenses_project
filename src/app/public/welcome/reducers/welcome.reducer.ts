@@ -1,6 +1,6 @@
 import {Action, createReducer, on} from "@ngrx/store";
-import {WelcomePageActions} from "../../public/welcome/actions"
-import {Expense} from "../models/expense";
+import {WelcomePageActions} from "../actions"
+import {Expense} from "../../../shared/models/expense";
 
 export interface State {
   lastExpenseSaved: Expense[]

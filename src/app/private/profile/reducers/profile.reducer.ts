@@ -1,5 +1,5 @@
 import {Action, createReducer, on} from "@ngrx/store";
-import {ProfilePageActions} from "../../private/profile/actions";
+import {ProfilePageActions} from "../actions";
 
 export interface State {
   loading: boolean;
