@@ -38,7 +38,7 @@
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "chance": "^1.1.8",
-    "cypress": "^9.3.1",
+    "cypress": "^9.7.0",
     "jasmine-core": "~3.10.0",
     "json-server": "^0.17.2",
     "karma": "~6.3.0",
