@@ -20,8 +20,11 @@
     </ng-template>
   </app-top-bar>
 </section>
-<div class="main-container">
-  <span class="title">Welcome</span>
+<div class="container">
+  <section class="title-section">
+    <span class="main-title">Welcome to my expenses app</span>
+    <span class="secondary-title">Please register to continue</span>
+  </section>
 </div>
 <!--<p>{{ 'hello' | transloco }}</p>
 
@@ -120,12 +123,6 @@
     </ng-template>
   </app-card>
 </div>-->
-
-
-
-<div *ngFor="let expense of (expenses | async)">{{expense.id}}</div>
-
-
 
 
 

@@ -10,8 +10,7 @@ import {RouterReducerState} from "@ngrx/router-store";
 export class SharedService {
   private routerState: RouterReducerState<RouterStateUrl> | undefined;
 
-  constructor(private store: Store,
-  ) {}
+  constructor(private store: Store) {}
 
   // Router state
   get getRouterState(): RouterReducerState<RouterStateUrl> | undefined {
